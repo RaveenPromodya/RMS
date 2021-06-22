@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#" [routerLink]="['/app/users']" (click)="changeNavActive('users')">
+    <img src="../../../assets/img/top-nav/top-nav-logo.png" width="70" height="70" alt="">
+  </a>
+  <!-- <a class="navbar-brand" href="#">R-M-S</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" #users (click)="changeNavActive('users')">
+        <a class="nav-link" href="#" [routerLink]="['/app/users']">Users</a>
+      </li>
+      <li class="nav-item" #roles (click)="changeNavActive('roles')">
+        <a class="nav-link" href="#" [routerLink]="['/app/roles']">Roles </a>
+      </li>
+    </ul>
+  </div>
+</nav>

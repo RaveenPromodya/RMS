@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Users</h1>
+
+  <div class="d-flex justify-content-end" *ngIf="users.length != 0">
+    <a href="#" class="btn btn-success" [routerLink]="['add-user']"> + ADD NEW USER</a>
+  </div>
+
+  <br>
+
+  <div *ngIf="isLoading">
+    <h5 class="d-flex justify-content-center">Loading .. </h5>
+  </div>
+
+  <div *ngIf="!isLoading">
+    <div *ngFor="let user of users">
+      <app-user-card [userData]="user" (userDeleteEvent)="updateUserCollection($event)"></app-user-card>
+      <br>
+    </div>
+  </div>
+
+  <div *ngIf="users.length == 0 && !isLoading">
+    <div class="d-flex justify-content-center" >
+      <h6>Opps! there are no users to show. Please add a user.</h6>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <a href="#" class="btn btn-success" [routerLink]="['add-user']"> + ADD NEW USER</a>
+    </div>
+  </div>
+</div>
