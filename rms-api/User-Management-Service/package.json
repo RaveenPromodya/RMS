@@ -1,0 +1,20 @@
+{
+  "name": "User-Management-Service",
+  "version": "1.0.0",
+  "description": "This serve is used to manage all the user related backend operations",
+  "main": "userservice.js",
+  "scripts": {
+    "start": "node userservice.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26"
+  }
+}
